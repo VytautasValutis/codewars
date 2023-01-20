@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "999": "nodemon ./js/999-SpeedCode-2.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
