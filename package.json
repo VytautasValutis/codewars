@@ -6,6 +6,7 @@
   "scripts": {
     "998": "nodemon ./js/998-IndexOfArrayInArray.js",
     "999": "nodemon ./js/999-SpeedCode-2.js",
+    "testjs": "nodemon ./js/test.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
