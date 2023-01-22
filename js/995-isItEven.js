@@ -1,10 +1,13 @@
 console.clear();
+// https://www.codewars.com/kata/555a67db74814aa4ee0001b5
 function test(a) {
-    if (a % 2 === 0 && Number.isSafeInteger(a)) {
-        return true;
-    }
-    return false;
+    return (a % 2 === 0 && Number.isSafeInteger(a))?true:false;
 }
+
+// NESUTINKU !!!
+// function testEven(n) {
+//     return n%2===0;
+// }
 
 console.log(`* `,test(1));
 console.log(`  `,test(2));
