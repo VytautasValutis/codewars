@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "994": "nodemon ./js/994-OrderedCountOfCharacters.js",
     "995": "nodemon ./js/995-isItEven.js",
     "996": "nodemon ./js/996-AllStarCodeChallenge.js",
     "997": "nodemon ./js/997-Polish-alphabet.js",
