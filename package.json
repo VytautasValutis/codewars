@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "992": "nodemon ./js/992-scoringWord.js",
     "993": "nodemon ./js/993-collatz.js",
     "994": "nodemon ./js/994-OrderedCountOfCharacters.js",
     "995": "nodemon ./js/995-isItEven.js",
