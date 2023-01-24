@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "986": "nodemon ./js/986-sumOfDigits.js",
     "987": "nodemon ./js/987-RomanNum.js",
     "988": "nodemon ./js/988-doors.js",
     "989": "nodemon ./js/989-findUniqString.js",
