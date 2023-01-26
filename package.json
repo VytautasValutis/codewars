@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "981": "nodemon ./js/981-conway.js",
     "982": "nodemon ./js/982-baker.js",
     "983": "nodemon ./js/983-podium.js",
     "984": "nodemon ./js/984-decomp.js",

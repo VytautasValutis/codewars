@@ -1,4 +1,5 @@
 console.clear();
+// https://www.codewars.com/kata/530045e3c7c0f4d3420001af
 function test(n) {
     console.log(n);
     let k = ('' + n).split('');
@@ -14,9 +15,14 @@ function test(n) {
         };
     };
     rz += '' + sum + k[k.length - 1];
-    return rz;
+    return  Number(rz);
 }
-console.log(test(23));
+
+// function lookSay(n){
+//     return +(''+n).replace(/((\d)\2*)/g, function(m){ return m.length+m[0] })
+//   }
+
+console.log(test(0));
 console.log(test(2014));
 console.log(test(9000));
 console.log(test(2322));
