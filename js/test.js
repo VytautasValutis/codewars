@@ -4,6 +4,7 @@ function test(rec, deze) {
     let kiekis = [];
     let k = 0;
     for(const produktas in rec) {
+        let arYra = false;
         for(const maiselis in deze) {
             if(produktas === maiselis) {
                 console.log(produktas, maiselis);
