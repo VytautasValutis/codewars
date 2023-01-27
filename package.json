@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "980": "nodemon ./js/980-count9.js",
     "981": "nodemon ./js/981-conway.js",
     "982": "nodemon ./js/982-baker.js",
     "983": "nodemon ./js/983-podium.js",
@@ -23,6 +24,7 @@
     "997": "nodemon ./js/997-Polish-alphabet.js",
     "998": "nodemon ./js/998-IndexOfArrayInArray.js",
     "999": "nodemon ./js/999-SpeedCode-2.js",
+    "tst": "nodemon ./js/tst.js",
     "testjs": "nodemon ./js/test.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
