@@ -1,7 +1,8 @@
 console.clear();
-function testas(str) {
+// https://www.codewars.com/kata/5727bb0fe81185ae62000ae3
+function testas(s) {
     let c = [];
-    (str.split('')).map(( a ) => 
+    (s.split('')).map(( a ) => 
         a === '#'? c.pop() : c.push(a), c);
     return c.join('');
 }
