@@ -1,15 +1,27 @@
 console.clear();
-function testas(n) {
+function testas(s1, s2) {
     let rez = [];
-    for (let i = 0; i < n; i++) {
-        let l = [];
-        for (let j = 0; j < 5; j++) {
-           l.push((j + 1) * (i + 1));
-        }        
-        rez.push(l)
+    let i = 0;
+    let j = 0;
+    while(i < s1.length && j < s2.length) {
+        if(s1[i] <= s2[j]) {
+            rez.push(s1[i++]);
+        } else {
+            rez.push(s2[j++]);
+        }
     }
-    return rez;
+    while( i < s1.length) {
+        rez.push(s1[i++]);
+    }
+    while( j < s2.length) {
+        rez.push(s2[j++]);
+    }
+    return rez ;
 }
 
-console.log(testas(5));
+console.log(testas([1, 2, 3, 4, 5],[1, 2, 4, 7, 8]));
+console.log(testas([10],[1, 2, 4, 7, 8]));
+console.log(testas([],[1, 2, 4, 7, 8]));
+console.log(testas([],[]));
+console.log(testas([1, 2, 3, 4, 5, 66],[1, 2, 4, 7, 8]));
 
