@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "976": "nodemon ./js/976-multiTable.js",
     "977": "nodemon ./js/977-backspaces.js",
     "978": "nodemon ./js/978-moreZeros.js",
     "979": "nodemon ./js/979-rgb.js",

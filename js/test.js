@@ -1,13 +1,15 @@
 console.clear();
-function testas(str) {
-    let c = [];
-    (str.split('')).map(( a ) => 
-        a === '#'? c.pop() : c.push(a), c);
-    return c.join('');
+function testas(n) {
+    let rez = [];
+    for (let i = 0; i < n; i++) {
+        let l = [];
+        for (let j = 0; j < 5; j++) {
+           l.push((j + 1) * (i + 1));
+        }        
+        rez.push(l)
+    }
+    return rez;
 }
 
-console.log(testas('abc#d##c'));
-console.log(testas('abc##d######'));
-console.log(testas('######'));
-console.log(testas(''));
+console.log(testas(5));
 
