@@ -1,11 +1,8 @@
 console.clear();
-function count(nn) {
-    let sum = 0;
-    for (let i = 1; i <= nn; i++) {
-        sum += ('' + i).split('').reduce(( a, b ) => b === '9' ? ++a : a, 0 );
-    }
-    return sum ;
+function aM(a, b) {
+    console.log(a ** 2); 
+    return '***' ;
 }
 
-console.log(count(19391));
+console.log(aM([4,5,6],[1,2,3]));
 
