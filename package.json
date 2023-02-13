@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "972": "nodemon ./js/972-hashtag.js",
     "973": "nodemon ./js/973-ffc.js",
     "974": "nodemon ./js/974-encoder.js",
     "975": "nodemon ./js/975-mergeSort.js",
