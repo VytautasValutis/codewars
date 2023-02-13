@@ -19,8 +19,10 @@ function testas(str) {
     while (!end) {
         end = true;
         let i = 0;
-        while(i < arr.length - 2) {
+        console.log("ciklas =>",k,arr);
+        while(i < arr.length - 1) {
             let diff = ffc(arr[i]) - ffc(arr[i + 1]);
+            console.log(i, arr[i], arr[i+1], diff);
             if(diff === 0) {
                 if(arr[i].toString() > arr[i + 1].toString()) {
                     temp = arr[i];
@@ -47,3 +49,12 @@ function testas(str) {
 // console.log(testas(" 56 33 100   22 56 89 98 13 120 99"));
 console.log(testas("103 123 4444 99 2000"));
 
+// function orderWeight(strng) {
+//     const sum = (str)=>str.split('').reduce((sum,el)=>(sum+(+el)),0);
+//      function comp(a,b){
+//        let sumA = sum(a);
+//        let sumB = sum(b);
+//        return sumA === sumB ? a.localeCompare(b) : sumA - sumB;
+//       };
+//     return strng.split(' ').sort(comp).join(' ');
+//    }
