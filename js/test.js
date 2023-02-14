@@ -3,38 +3,41 @@ function testas(program) {
     console.log('-----------------------');
     console.log(program);
     console.log('=======================');
-    let str = {
-        name: '',
-        value: 0,
-    };
+    let register = [];
     let comNr = 0;
     let comm = [];
+    let ifExist = true;
     while (comNr < program.length) {
         comm = program[comNr].split(" ");
+        ifExist = register.findIndex((a) => a.name === comm[1]) >= 0;
         switch (comm[0]) {
             case 'mov':
-                if(str[comm[1]] === '') {
-                    console.log("Nera");
+                if(ifExist) {
+                    register.find((a) => a.name === comm[1]).value = comm[2];
                 } else {
-                    console.log("Yra");
+                    register.push({name : comm[1], value : comm[2]});
                 }
                 break;
             case 'inc':
-                
+                register.find((a) => a.name === comm[1]).value++;
                 break;
             case 'dec':
-                
+                register.find((a) => a.name === comm[1]).value--;
                 break;
             case 'jnz':
-                
+                if(register.find((a) => a.name === comm[1]).value > 0) {
+                    comNr += comm[2];
+                    continue;
+                }
                 break;
             default:
                 return false;
                 break;
         }
-        console.log(comNr, program[comNr],comm);
         comNr++;
     }
+    console.log(register);
+    console.log(comNr, program[comNr],comm);
     return str;
 }
 
