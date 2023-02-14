@@ -1,13 +1,17 @@
 console.clear();
-function testas(str) {
+function testas(program) {
     console.log('-----------------------');
-    console.log(str);
+    console.log(program);
     console.log('=======================');
-    if(str === '') {
-        return false ;
+    let str = {};
+    let comNr = 0;
+    while (comNr < program.length) {
+        console.log(comNr, program[comNr]);
+        comNr++;
     }
+    return str;
 }
 
 // console.log(testas(""));
-console.log(testas(" Hello there thanks for trying my Kata"));
+console.log(testas(['mov a 5','inc a','dec a','dec a','jnz a -1', 'inc a']));
 
