@@ -9,6 +9,8 @@ function testas(program) {
     let ifExist = true;
     while (comNr < program.length) {
         comm = program[comNr].split(" ");
+        console.log(comNr,"... ..",register);
+        // console.log(comm);
         ifExist = register.findIndex((a) => a.name === comm[1]) >= 0;
         switch (comm[0]) {
             case 'mov':
@@ -17,28 +19,35 @@ function testas(program) {
                 } else {
                     register.push({name : comm[1], value : comm[2]});
                 }
+                comNr++;
                 break;
             case 'inc':
+                console.log(comNr,"inc +>",register);
                 register.find((a) => a.name === comm[1]).value++;
+                console.log(comNr,"inc =>",register);
+                comNr++;
                 break;
             case 'dec':
                 register.find((a) => a.name === comm[1]).value--;
+                comNr++;
                 break;
             case 'jnz':
+                console.log(comNr," jnz +>");
                 if(register.find((a) => a.name === comm[1]).value > 0) {
                     comNr += comm[2];
-                    continue;
+                } else {
+                    comNr++;
                 }
+                console.log(comNr," jnz =>");
                 break;
             default:
                 return false;
                 break;
         }
-        comNr++;
     }
     console.log(register);
     console.log(comNr, program[comNr],comm);
-    return str;
+    return "***";
 }
 
 // console.log(testas(""));

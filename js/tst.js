@@ -1,25 +1,10 @@
 console.clear();
-function TST(a) {
-    register = [];
-    let name = 'a';
-    let value = 1;
-    register.push({name : name, value : value});
-    name = 'b';
-    value = 2;
-    register.push({name, value});
-    name = 'c';
-    value = 3;
-    let nameB = 'b';
-    register.push({name, value});
-    console.log(register.findIndex((a) => a.name === 'c'));
-    // console.log(register.find((a) => a.name === 'd').value);
-    console.log(register);
-    console.log(register.name);
-    register.forEach(reg => {
-        console.log(reg.name);
-    });
-    console.log(register);
-
+function TST(b) {
+    let a = [];
+    for (let i = 0; i < 10; i++) {
+        a.push(Math.floor(Math.random() * 11) + 1);
+    }
+    console.log(a);
     return '***' ;
 }
 
