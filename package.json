@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "970": "nodemon ./js/970-countw.js",
     "971": "nodemon ./js/971-assembler.js",
     "972": "nodemon ./js/972-hashtag.js",
     "973": "nodemon ./js/973-ffc.js",
