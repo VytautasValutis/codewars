@@ -28,3 +28,11 @@ function testas(str) {
 console.log(testas("Hello there, little user5453 374 ())$."));
 console.log(testas("hello there"));
 
+// function wordCount(s) {
+//     return s
+//       .toLowerCase()
+//       .replace(/[^a-z]/g,' ')
+//       .match(/\b\w+\b/g)
+//       .filter(word => !["a","the","on","at","of","upon","in","as"].includes(word))
+//       .length
+//   }
