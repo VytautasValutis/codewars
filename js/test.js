@@ -1,28 +1,38 @@
 console.clear();
-function testas(str) {
+function testas(n) {
     console.log('-----------------------');
-    console.log(str);
+    console.log(n);
     console.log('=======================');
-    const isLetter = (smb) => (smb.charCodeAt() >= 97 && smb.charCodeAt() <= 122) ? true : false;
-    let words = [];
-    const wordsExcl = ["a", "the", "on", "at", "of", "upon", "in", "as"];
-    let word = [];
-    let wordString = '';
-    str = str.toLowerCase();
-    for (let i = 0; i < str.length; i++) {
-        if(isLetter(str.substring(i,i+1))) {
-            word.push(str.substring(i,i+1));
-        } else {
-            if(word.length < 1) continue;
-            wordString = word.join('');
-            word = [];
-            if(wordsExcl.indexOf(wordString) >= 0) continue;
-            words.push(wordString);
-        }
+    let rez = '';
+    const first19 = [0,1,2,3,4,5,6,7,8,9,11,22,33,44,55,66,77,88,99];
+    const nString = n.toString().split('');
+    const nLong = nString.length;
+    const lim1 = (2 * Math.pow(10,nLong-1));
+    const lim2 = Math.floor(lim1 * 0.55);
+    if(n < 20) return BigInt(first19[n-1]);
+    if(n < 100) {
+        rez += '' + (nString[0] - 1) + nString[1] + (nString[0] - 1);
+        return BigInt(rez);
     }
-    return words.length;
+    if(n < lim2) {
+        rez += '9';
+        for (let i = 2; i <= nLong - 1; i++) {rez += nString[i]}
+        for (let i = 2; i <= nLong - 2; i++) {rez += nString[nLong - i]}
+        rez += '9';
+        return BigInt(rez);
+    }
+    if(n < lim1) {
+        for (let i = 1; i <= nLong - 1; i++) {rez += nString[i]}
+        for (let i = 1; i <= nLong - 1; i++) {rez += nString[nLong - i]}
+        return BigInt(rez);
+    }
+    rez += (nString[0] - 1) ;
+    for (let i = 1; i <= nLong - 1; i++) {rez += nString[i]}
+    for (let i = 2; i <= nLong - 1; i++) {rez += nString[nLong - i]}
+    rez += (nString[0] - 1) ;
+    return BigInt(rez);
 }
 
-console.log(testas("Hello there, little user5453 374 ())$."));
-console.log(testas("I’d been using my sphere as a stool. I traced counterclockwise circles on it with my fingertips and it shrank until I could palm it. My bolt had shifted while I’d been sitting. I pulled it up and yanked the pleats straight as I careered around tables, chairs, globes, and slow-moving fraas. I passed under a stone arch into the Scriptorium. The place smelled richly of ink. Maybe it was because an ancient fraa and his two fids were copying out books there. But I wondered how long it would take to stop smelling that way if no one ever used it at all; a lot of ink had been spent there, and the wet smell of it must be deep into everything."));
+console.log(testas(75));
+console.log(testas(139));
 
