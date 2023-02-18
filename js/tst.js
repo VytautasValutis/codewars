@@ -1,21 +1,35 @@
 console.clear();
-function TST(b) {
-    let register = {};
-    const comm = ["mov","b","-5"];
-    const c = 'c';
-    const k = 'b';
-    let ifExist = true;
-    register[comm[1]] = comm[2];
-    console.log(register);
-    console.log(typeof register[c]);
-    ifExist = (typeof register[c] === 'number');
-    console.log(ifExist);
-    ifExist = (typeof register["b"] === 'number');
-    console.log(ifExist);
-    console.log(+comm[2]);
-    console.log(Number.isInteger(+comm[2]));
-    return "***";
+
+const RomanNumerals = {
+    toRoman: (n) => {
+        const letters = [
+            [``,`M`, `MM`, `MMM`],
+            [``,`C`,`CC`,`CCC`,'CD',`D`,`DC`,`DCC`,`DCCC`,`CM`],
+            [``,`X`,`XX`,`XXX`,`XL`,`L`,`LX`,`LXX`,`LXXX`,`XC`],
+            [``,`I`,`II`,`III`,`IV`,`V`,`VI`,`VII`,`VIII`,`IX`]
+        ];
+        return ['0','0','0'].concat(('' + n).split('')).slice(-4).map((a,i) => letters[i][a]).join('');
+    },
+    fromRoman: (n) => {
+        const letters = {
+            'I': 1,
+            'V': 5,
+            'X': 10,
+            'L': 50,
+            'C': 100,
+            'D': 500,
+            'M': 1000,
+        }
+        console.log(n.split('').reduce((a,b) =>  ));
+        return n;
+    },
 }
 
+const numA = 1945;
+const numR = 'DV';
+console.log(RomanNumerals.toRoman(numA));
+console.log(RomanNumerals.fromRoman(numR));
 
-console.log(TST(0));
+
+
+
